@@ -1,0 +1,47 @@
+<!-- FORMULARIO SIMULANDO QUE SOMOS EL COMERCIO -->
+<div class="row d-flex justify-content-center">
+  <div class="col-auto container mt-3">
+    <div class="col-12" style="text-align: center; margin-top: 10px;">
+      <img src="../assets/img/tienda.png" alt="Icono BazarClic" class="img">
+    </div>
+    <div class="col-12" style="text-align: center;">
+      <label class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 textCommerce">NetClip</label>
+    </div>
+    <div class="col-6 espaciados mx-auto text-center">
+      <label class="title">Pago con tarjeta</label>
+    </div>
+    <form>
+      <div class="form-group espaciados">
+        <label class="inputtext" for="cnumber">
+          <span style="color: red;">*</span>Número tarjeta de débito/crédito:</label>
+        <input type="text" class="form-control input" id="cnumber" placeholder="0000-0000-0000-0000">
+      </div>
+      <div class="row form-group espaciados">
+        <label class="inputtext" for="expdate">
+          <span style="color: red;">*</span>Fecha de vencimiento:</label>
+          <div class="col-12 d-flex">
+            <input type="text" class="form-control input" id="expmonth" placeholder="MM" style="width: 62px; height: 40px;">
+            <span class="mx-1"> / </span>
+            <input type="text" class="form-control input" id="expyear" placeholder="AA" style="width: 62px; height: 40px;">
+          </div>
+      </div>
+      <div class="form-group espaciados">
+        <label class="inputtext" for="cvv">
+          <span style="color: red;">*</span>Código de seguridad:</label>
+        <input type="text" class="form-control input" id="cvv" placeholder="CVV">
+      </div>
+    </form>
+    <button (click)="saveData()" class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 btn-form espaciados">
+      <span class="btntext">Pagar</span>
+    </button>
+  </div>
+</div>
+<ngx-spinner 
+  bdOpacity=0
+  bdColor = "rgba(0, 0, 0, 0.8)"
+  size = "medium" 
+  color = "#fff" 
+  type = "pacman" 
+  [fullScreen] = "true">
+  <p style="color: white; font-size: 20px;" > Transaccionando... </p>
+</ngx-spinner>
